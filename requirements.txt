@@ -144,4 +144,4 @@ wincertstore==0.2
 wrapt==1.11.2
 yapf==0.30.0
 zipp==3.4.0
-pyodbc==4.0.32
+pyodbc==4.0.30
