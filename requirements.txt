@@ -98,7 +98,6 @@ PyNaCl==1.4.0
 pyodbc==4.0.30
 pyOpenSSL==20.0.1
 pyparsing==2.4.7
-pyproj==2.6.1.post1
 PyQt5==5.12.3
 PyQt5-sip==4.19.18
 PyQtChart==5.12
