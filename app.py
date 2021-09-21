@@ -67,7 +67,7 @@ def upload():
 '''
 @app.route('/')
 def hello():
-    return render_template('index.html')
+    return "Hello Flask-Heroku"
 
 if __name__ == "__main__":
     app.run(debug=False)
