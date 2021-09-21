@@ -23,7 +23,7 @@ def convert(inputlat,inputlong) :
     
     #---------------------INPUT SHAPE---------------------
     # Importing Thailand ESRI Shapefile 
-    th_boundary = gpd.read_file('./shape/TH_tambon_boundary.shp')
+    th_boundary = gpd.read_file('./SHAPE/TH_tambon_boundary.shp')
     #---------------------Read POINT---------------------
     
     cvm_geo = [Point(xy) for xy in zip(df['Long'],df['Lat'])]
