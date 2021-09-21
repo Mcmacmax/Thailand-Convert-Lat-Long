@@ -5,6 +5,7 @@ import pandas as pd
 from shapely.geometry import Point
 import datetime
 from flask import Flask, jsonify, redirect, url_for, request, render_template 
+from geopandas.tools import sjoin
 
 start_datetime = datetime.datetime.now()
 print (start_datetime,'execute')
@@ -35,7 +36,7 @@ def convert(inputlat,inputlong) :
 
 
     #--------------------- Spatial Join------------------
-    output = gpd.sjoin(df,th_boundary, how = 'inner', op = 'intersects')
+    output = sjoin(df,th_boundary, how = 'inner', op = 'intersects')
     for x in output.values:
         result = x[7]
     return (result)
