@@ -9,7 +9,9 @@ from flask import Flask, jsonify, redirect, url_for, request, render_template
 start_datetime = datetime.datetime.now()
 print (start_datetime,'execute')
 
-
+#---------------------INPUT SHAPE---------------------
+# Importing Thailand ESRI Shapefile 
+th_boundary = gpd.read_file('.//SHAPE//TH_tambon_boundary.shp')
 
 def convert(inputlat,inputlong) :    
     try:
@@ -21,9 +23,6 @@ def convert(inputlat,inputlong) :
     d = {'Lat': [inputlat], 'Long': [inputlong]}
     df = pd.DataFrame(data=d)
     
-    #---------------------INPUT SHAPE---------------------
-    # Importing Thailand ESRI Shapefile 
-    th_boundary = gpd.read_file('.//SHAPE//TH_tambon_boundary.shp')
     #---------------------Read POINT---------------------
     
     cvm_geo = [Point(xy) for xy in zip(df['Long'],df['Lat'])]
