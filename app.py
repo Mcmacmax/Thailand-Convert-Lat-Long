@@ -34,7 +34,8 @@ def convert(inputlat,inputlong) :
     #cvm_point.plot()
     
     #--------------------- Spatial Join------------------
-    output = sjoin(df,th_boundary, how = 'inner', op = 'intersects')
+    #output = gpd.sjoin(df,th_boundary, how = 'inner', op = 'intersects')
+    output = gpd.sjoin(df,th_boundary)
     for x in output.values:
         result = str(x[7])
     return (result)
