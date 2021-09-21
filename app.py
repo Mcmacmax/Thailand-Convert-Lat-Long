@@ -36,9 +36,9 @@ def convert(inputlat,inputlong) :
 
     #--------------------- Spatial Join------------------
     output = gpd.sjoin(df,th_boundary, how = 'inner', op = 'intersects')
-    for x in th_boundary.values:
-        result = x[4]
-        return (result)
+    for x in output.values:
+        result = x[7]
+    return (result)
 '''
     #---------------------- print output ------------------
     print(output['p_name_t'])
@@ -49,8 +49,7 @@ def convert(inputlat,inputlong) :
             Province = x[7]
             Aumphoe = x[9]
             Tambon = x[11]
-            #result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
-            result = "OKAY PASS"
+            result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
         return (result)
 '''        
 
