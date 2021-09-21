@@ -49,11 +49,12 @@ def convert(inputlat,inputlong) :
 '''
 
 app = Flask(__name__)
-
+'''
 @app.route('/', methods=['GET'])
 def index():
     # Main page
     return render_template('index.html')
+'''
 '''
 @app.route('/', methods=['POST'])
 def upload():
@@ -64,6 +65,9 @@ def upload():
         return convert(data1,data2)
     return None
 '''
+@app.route('/')
+def hello():
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(debug=False)
