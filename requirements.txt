@@ -112,8 +112,6 @@ sphinxcontrib-htmlhelp==1.0.3
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.4
-spyder==4.2.1
-spyder-kernels==1.10.1
 testpath==0.4.4
 textdistance==4.2.0
 three-merge==0.1.1
