@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # import os, sys
-import geopandas as gpd
-import pandas as pd
-from shapely.geometry import Point
-import datetime
+#import geopandas as gpd
+#import pandas as pd
+#from shapely.geometry import Point
+#import datetime
 from flask import Flask, jsonify, redirect, url_for, request, render_template 
 '''
 start_datetime = datetime.datetime.now()
