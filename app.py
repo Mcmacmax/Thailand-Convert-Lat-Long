@@ -31,15 +31,15 @@ def convert(inputlat,inputlong) :
     df.set_crs(epsg=4326, inplace=True)
     df = df.to_crs(epsg=32647)
     #cvm_point.plot()
+    
+
+
+    #--------------------- Spatial Join------------------
+    output = gpd.sjoin(df,th_boundary, how = 'inner', op = 'intersects')
     for x in th_boundary.values:
         result = x[4]
         return (result)
-
 '''
-    #--------------------- Spatial Join------------------
-    output = gpd.sjoin(df,th_boundary, how = 'inner', op = 'intersects')
-    
-
     #---------------------- print output ------------------
     print(output['p_name_t'])
     if output['p_name_t'].empty :
