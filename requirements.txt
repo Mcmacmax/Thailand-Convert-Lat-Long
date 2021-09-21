@@ -18,3 +18,4 @@ gunicorn
 
 #MUST USE
 geopandas
+Shapely
