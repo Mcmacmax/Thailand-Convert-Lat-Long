@@ -31,9 +31,8 @@ def convert(inputlat,inputlong) :
     df.set_crs(epsg=4326, inplace=True)
     df = df.to_crs(epsg=32647)
     #cvm_point.plot()
-    result = "OKAY PASS"
-    return (result)
-    '''
+    
+    
     #--------------------- Spatial Join------------------
     output = gpd.sjoin(df,th_boundary, how = 'inner', op = 'intersects')
     
@@ -46,9 +45,11 @@ def convert(inputlat,inputlong) :
             Province = x[7]
             Aumphoe = x[9]
             Tambon = x[11]
-            result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
+            #result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
+            result = "OKAY PASS"
         return (result)
-'''
+        
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
