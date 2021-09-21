@@ -49,7 +49,7 @@ def convert(inputlat,inputlong) :
 
 
 app = Flask(__name__)
-
+'''
 @app.route('/', methods=['GET'])
 def index():
     # Main page
@@ -63,7 +63,9 @@ def upload():
         print(data1 , data2)
         return convert(data1,data2)
     return None
-
+'''
+def index():
+    return "This is yet another version!"
 
 if __name__ == "__main__":
     app.run(debug=False)
