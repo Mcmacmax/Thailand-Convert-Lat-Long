@@ -17,5 +17,5 @@ gevent
 gunicorn
 
 #MUST USE
-geopandas
-Shapely
+geopandas==0.8.1
+Shapely==1.7.1
