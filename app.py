@@ -31,8 +31,9 @@ def convert(inputlat,inputlong) :
     df.set_crs(epsg=4326, inplace=True)
     df = df.to_crs(epsg=32647)
     #cvm_point.plot()
-    result = "OKAY PASS"
-    return (result)
+    for x in th_boundary.values:
+        result = x[1]
+        return (result)
 
 '''
     #--------------------- Spatial Join------------------
