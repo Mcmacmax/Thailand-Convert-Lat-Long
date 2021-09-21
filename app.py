@@ -35,7 +35,9 @@ def convert(inputlat,inputlong) :
     
     #--------------------- Spatial Join------------------
     output = gpd.sjoin(df,th_boundary, how = 'inner', op = 'intersects')
-    
+    result = "OKAY PASS"
+    return (result)
+'''
     #---------------------- print output ------------------
     print(output['p_name_t'])
     if output['p_name_t'].empty :
@@ -48,7 +50,7 @@ def convert(inputlat,inputlong) :
             #result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
             result = "OKAY PASS"
         return (result)
-        
+'''        
 
 app = Flask(__name__)
 
