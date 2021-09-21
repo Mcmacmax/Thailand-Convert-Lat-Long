@@ -8,7 +8,7 @@ from flask import Flask, jsonify, redirect, url_for, request, render_template
 
 start_datetime = datetime.datetime.now()
 print (start_datetime,'execute')
-'''
+
 #---------------------INPUT SHAPE---------------------
 path = './'
 # Importing Thailand ESRI Shapefile 
@@ -46,7 +46,7 @@ def convert(inputlat,inputlong) :
             Tambon = x[11]
             result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
         return (result)
-'''
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
