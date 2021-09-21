@@ -10,7 +10,7 @@ start_datetime = datetime.datetime.now()
 print (start_datetime,'execute')
 
 #---------------------INPUT SHAPE---------------------
-path = 'D:/LAB/Geopandas_Beer/'
+path = './'
 # Importing Thailand ESRI Shapefile 
 th_boundary = gpd.read_file(path+'/shape/TH_tambon_boundary.shp')
 
