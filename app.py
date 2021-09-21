@@ -32,7 +32,7 @@ def convert(inputlat,inputlong) :
     df = df.to_crs(epsg=32647)
     #cvm_point.plot()
     for x in th_boundary.values:
-        result = x[1]
+        result = x[4]
         return (result)
 
 '''
