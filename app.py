@@ -2,7 +2,7 @@
 # import os, sys
 import geopandas as gpd
 import pandas as pd
-#from shapely.geometry import Point
+from shapely.geometry import Point
 import datetime
 from flask import Flask, jsonify, redirect, url_for, request, render_template 
 
@@ -47,15 +47,13 @@ def convert(inputlat,inputlong) :
             result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
         return (result)
 '''
-
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
     # Main page
     return render_template('index.html')
-'''
-'''
+
 @app.route('/', methods=['POST'])
 def upload():
     if request.method == 'POST':
