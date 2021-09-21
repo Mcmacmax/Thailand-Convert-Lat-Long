@@ -5,7 +5,7 @@ import pandas as pd
 #from shapely.geometry import Point
 import datetime
 from flask import Flask, jsonify, redirect, url_for, request, render_template 
-'''
+
 start_datetime = datetime.datetime.now()
 print (start_datetime,'execute')
 
@@ -46,10 +46,10 @@ def convert(inputlat,inputlong) :
             Tambon = x[11]
             result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
         return (result)
-'''
+
 
 app = Flask(__name__)
-'''
+
 @app.route('/', methods=['GET'])
 def index():
     # Main page
@@ -64,10 +64,6 @@ def upload():
         print(data1 , data2)
         return convert(data1,data2)
     return None
-'''
-@app.route('/')
-def hello():
-    return "Hello Flask-Heroku"
 
 if __name__ == "__main__":
     app.run(debug=False)
