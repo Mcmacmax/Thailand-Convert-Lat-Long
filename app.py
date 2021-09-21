@@ -22,7 +22,9 @@ def convert(inputlat,inputlong) :
 
     d = {'Lat': [inputlat], 'Long': [inputlong]}
     df = pd.DataFrame(data=d)
-    
+    result = "AASDADS"
+    return (result)
+    '''
     #---------------------Read POINT---------------------
     
     cvm_geo = [Point(xy) for xy in zip(df['Long'],df['Lat'])]
@@ -45,7 +47,7 @@ def convert(inputlat,inputlong) :
             Tambon = x[11]
             result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
         return (result)
-
+'''
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
