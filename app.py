@@ -13,7 +13,7 @@ print (start_datetime,'execute')
 path = './'
 # Importing Thailand ESRI Shapefile 
 th_boundary = gpd.read_file(path+'/shape/TH_tambon_boundary.shp')
-
+'''
 def convert(inputlat,inputlong) :    
     try:
         inputlat = float(inputlat)
@@ -46,7 +46,7 @@ def convert(inputlat,inputlong) :
             Tambon = x[11]
             result = "จังหวัด : "+Province+ " อำเภอ : "+Aumphoe+" ตำบล : "+Tambon
         return (result)
-
+'''
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
