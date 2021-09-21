@@ -54,7 +54,7 @@ app = Flask(__name__)
 def index():
     # Main page
     return render_template('index.html')
-
+'''
 @app.route('/', methods=['POST'])
 def upload():
     if request.method == 'POST':
@@ -63,7 +63,7 @@ def upload():
         print(data1 , data2)
         return convert(data1,data2)
     return None
-
+'''
 
 if __name__ == "__main__":
     app.run(debug=False)
