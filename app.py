@@ -22,9 +22,8 @@ def convert(inputlat,inputlong) :
 
     d = {'Lat': [inputlat], 'Long': [inputlong]}
     df = pd.DataFrame(data=d)
-    result = "AASDADS"
-    return (result)
-    '''
+    
+    
     #---------------------Read POINT---------------------
     
     cvm_geo = [Point(xy) for xy in zip(df['Long'],df['Lat'])]
@@ -32,7 +31,9 @@ def convert(inputlat,inputlong) :
     df.set_crs(epsg=4326, inplace=True)
     df = df.to_crs(epsg=32647)
     #cvm_point.plot()
-    
+    result = "OKAY PASS"
+    return (result)
+    '''
     #--------------------- Spatial Join------------------
     output = gpd.sjoin(df,th_boundary, how = 'inner', op = 'intersects')
     
