@@ -12,3 +12,6 @@ atomicwrites==1.4.0
 attrs==20.3.0
 wheel==0.36.2
 requests==2.25.1
+numpy==1.19.5
+numpydoc==1.1.0
+Fiona==1.8.18
