@@ -128,3 +128,4 @@ wincertstore==0.2
 wrapt==1.11.2
 yapf==0.30.0
 zipp==3.4.0
+pip install Rtree==0.9.7
